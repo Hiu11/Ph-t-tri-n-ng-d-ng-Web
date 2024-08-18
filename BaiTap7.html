@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tổng hợp bài tập</title>
+    <style>
+        /* Định dạng CSS */
+        .toc {
+            list-style-type: none;
+            padding: 0;
+        }
+        .iframe-container {
+            margin-bottom: 20px;
+        }
+        .back-to-top {
+            display: block;
+            text-align: center;
+            color: blue;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tổng hợp bài tập</h1>
+    <ul class="toc">
+        <li><a href="#bai-tap-1">Bài tập 1</a></li>
+        <li><a href="#bai-tap-2">Bài tập 2</a></li>
+        <li><a href="#bai-tap-3">Bài tập 3</a></li>
+        </ul>
+
+    <div id="bai-tap-1" class="iframe-container">
+        <h2>Bài tập 1</h2>
+        <iframe src="bai_tap_1.html" frameborder="0"></iframe>
+        <a href="#" class="back-to-top">Về đầu trang</a>
+    </div>
+
+    <div id="bai-tap-2" class="iframe-container">
+        <h2>Bài tập 2</h2>
+        <iframe src="bai_tap_2.html" frameborder="0"></iframe>
+        <a href="#" class="back-to-top">Về đầu trang</a>
+    </div>
+
+    <div id="bai-tap-3" class="iframe-container">
+        <h2>Bài tập 3</h2>
+        <iframe src="bai_tap_3.html" frameborder="0"></iframe>
+        <a href="#" class="back-to-top">Về đầu trang</a>
+    </div>
+
+    <script>
+        // Lấy tất cả các liên kết "Về đầu trang"
+        const backToTopButtons = document.querySelectorAll('.back-to-top');
+
+        // Thêm sự kiện click cho mỗi nút
+        backToTopButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
